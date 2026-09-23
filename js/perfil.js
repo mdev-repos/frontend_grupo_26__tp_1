@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resetScan();
     fills.forEach((fill, i) => {
       const target = fill.getAttribute("data-value") || "0";
-      // pequeño retraso escalonado para efecto de "escaneo"
       setTimeout(() => {
         fill.style.width = target + "%";
         if (values[i]) values[i].textContent = target + "%";
@@ -30,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scanBtn.textContent = "[ RE-ESCANEAR ]";
   }
 
-  resetScan();
+  runScan(); // ← se ejecuta automáticamente al cargar la página
   scanBtn.addEventListener("click", runScan);
 });
