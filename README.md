@@ -83,11 +83,11 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 
 ### Emmanuel
 
-- **Herramientas:** `hy3` y `ox alpha` (plan gratuito de opencode), `Kimi Code` (suscripción de pago). Sin Claude.
-- **Experiencia previa:** uso diario de agentes de IA en el flujo de ingeniería (PFO1 individual con la misma declaración).
-- **Qué asistieron:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil.
-- **Criterio propio:** todos los textos, niveles de habilidad, decisión de imágenes y la bitácora grupal se redactaron y revisaron a mano; el JS de la rama (`main.js`, `perfil.js`) es del equipo y se reusó sin cambios.
-- **Imágenes:** foto propia (`Emma.png`); pósters y carátulas aportados por Emmanuel — <!-- PENDIENTE: confirmar origen exacto de cada imagen (propia / IA con modelo y prompt / descarga) antes de entregar. -->
+- **Herramientas:** opencode con el modelo Muse Spark 1.3 (plan gratuito).
+- **Experiencia previa:** uso diario de agentes de IA en el flujo de ingeniería.
+- **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil.
+- **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS de la rama (`main.js`, `perfil.js`) es del equipo y se reusó sin cambios.
+- **Imágenes:** foto propia (`Emma.png`); pósters y carátulas descargados de páginas web públicas.
 
 > <!-- PENDIENTE GRUPO: cada integrante agrega su bloque (herramientas, plan, experiencia, qué revisó con criterio propio). -->
 
