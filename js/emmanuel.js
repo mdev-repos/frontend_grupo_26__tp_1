@@ -1,6 +1,3 @@
-// GRUPO 26 · TP1 — emmanuel.js (complemento propio)
-// Lightbox: click en una media-card la abre en grande; cierra con Esc,
-// botón o click fuera. No toca main.js ni perfil.js.
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.querySelector("#lightbox");
   if (!modal) return;
@@ -9,11 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = modal.querySelector("[data-close]");
   let lastFocus = null;
 
-  function open(src, alt, title) {
-    img.src = src;
-    img.alt = alt;
-    caption.textContent = title;
-    lastFocus = document.activeElement;
+  function open(card) {
+    const pic = card.querySelector("img");
+    const title = card.querySelector("h3");
+    if (!pic || !pic.src) return;
+    img.src = pic.src;
+    img.alt = pic.alt;
+    caption.textContent = title ? title.textContent : pic.alt;
+    lastFocus = card;
     modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
     closeBtn.focus();
@@ -26,19 +26,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll(".media-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const pic = card.querySelector("img");
-      const title = card.querySelector("h3");
-      if (!pic || !pic.src) return;
-      open(pic.src, pic.alt, title ? title.textContent : pic.alt);
+    const title = card.querySelector("h3");
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `Ampliar ${title ? title.textContent : "imagen"}`);
+    card.addEventListener("click", () => open(card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open(card);
+      }
     });
   });
 
   closeBtn.addEventListener("click", close);
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) close();
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
   });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) close();
   });
 });

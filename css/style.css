@@ -704,8 +704,7 @@ h1, h2, h3 {
 }
 .skill-value { color: var(--cyan); text-align: right; }
 
-/* Lightbox de Emmanuel (complemento propio, reutiliza vars Nightscan) */
-.media-card { cursor: zoom-in; }
+.has-lightbox .media-card { cursor: zoom-in; }
 .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(4, 5, 13, 0.9); z-index: 50; padding: 1rem; }
 .lightbox.is-open { display: flex; }
 .lightbox figure { margin: 0; max-width: min(90vw, 560px); background: var(--bg-panel-alt); border: 1px solid var(--cyan); padding: 1rem; }
