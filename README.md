@@ -63,9 +63,10 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Reiniciar transmisión:** re-ejecuta el typewriter y dispara un glitch en el título.
 - **Auto pick character:** elige un integrante al azar, resalta su tarjeta y la desplaza a la vista.
 
-### Perfiles (`js/perfil.js`)
+### Perfiles (`js/perfil.js` + `js/emmanuel.js`)
 
 - **Escanear habilidades:** anima las barras de skill hasta el nivel (`data-value`) de cada integrante, en cascada. Corre al cargar y con el botón `[ ESCANEAR / RE-ESCANEAR ]`.
+- **Lightbox de Emmanuel (`js/emmanuel.js`, solo `emmanuel.html`):** click en una tarjeta de película/disco la abre en grande (modal con título); cierra con Esc, botón `[ CERRAR × ]` o click fuera. No toca `main.js` ni `perfil.js`.
 
 > <!-- PENDIENTE GRUPO: agregar capturas de pantalla de cada función (portada + 5 perfiles). -->
 
@@ -85,8 +86,8 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 
 - **Herramientas:** opencode con el modelo Muse Spark 1.3 (plan gratuito).
 - **Experiencia previa:** uso diario de agentes de IA en el flujo de ingeniería.
-- **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil.
-- **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS de la rama (`main.js`, `perfil.js`) es del equipo y se reusó sin cambios.
+- **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil; lightbox propio (`js/emmanuel.js` + estilos + modal) y porcentajes de skills variados (90/85/80/70).
+- **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS del equipo (`main.js`, `perfil.js`) se reusó sin cambios y el lightbox nuevo se probó a mano (abrir/cerrar con Esc, botón y click fuera).
 - **Imágenes:** foto propia (`Emma.png`); pósters y carátulas descargados de páginas web públicas.
 
 > <!-- PENDIENTE GRUPO: cada integrante agrega su bloque (herramientas, plan, experiencia, qué revisó con criterio propio). -->
