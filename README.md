@@ -88,7 +88,7 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Experiencia previa:** uso diario de agentes de IA en el flujo de ingeniería.
 - **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil; lightbox propio (`js/emmanuel.js` + estilos + modal) y porcentajes de skills variados (90/85/80/70).
 - **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS del equipo (`main.js`, `perfil.js`) se reusó sin cambios y el lightbox nuevo se probó a mano (abrir/cerrar con Esc, botón y click fuera).
-- **Imágenes:** foto propia (`Emma.png`); pósters y carátulas descargados de páginas web públicas.
+- **Imágenes:** foto propia (`emma.jpg`); pósters y carátulas descargados de páginas web públicas.
 
 > <!-- PENDIENTE GRUPO: cada integrante agrega su bloque (herramientas, plan, experiencia, qué revisó con criterio propio). -->
 
