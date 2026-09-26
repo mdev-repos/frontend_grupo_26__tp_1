@@ -91,7 +91,14 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Imágenes:** foto propia (`emma.jpg`); pósters y carátulas descargados de páginas web públicas.
 
 > <!-- PENDIENTE GRUPO: cada integrante agrega su bloque (herramientas, plan, experiencia, qué revisó con criterio propio). -->
+### Ariel
 
+
+Como parte del proceso he empleado,  un asistente de IA (Claude, de Anthropic) como herramienta de apoyo en tareas puntuales. A continuación se detalla en qué instancias se usó y de qué forma:
+- **Sección "Configurador de robot" (perfil de Maximo):** se solicitó a la IA el desarrollo de la interactividad en JavaScript para elegir motor, sensor, driver y placa de control, incluyendo la lógica de validación de compatibilidad entre componentes (por ejemplo, qué drivers admiten cada tipo de motor, o qué placas soportan el shield L293). El HTML/CSS de la sección se adaptó para seguir la temática cyberpunk 2077 y las clases ya existentes en `css/style.css`.
+- **Soporte en comandos de terminal:** se usó la IA como ayuda para armar y corregir comandos de Git Bash (rutas de Windows a formato MINGW64, `cp` para copiar contenido entre carpetas, lectura de `git status`) al momento de integrar cambios locales al repositorio.
+
+En todos los casos, el código y el contenido generado fueron revisados, probados y ajustados por el equipo antes de integrarlos al proyecto; la IA se usó como apoyo para acelerar tareas puntuales, no como reemplazo del trabajo ni de las decisiones técnicas del grupo.
 ## Entrega
 
 En la planilla única de entregas se carga un solo enlace: el de este repositorio público. La URL de Vercel se revisa desde este README.
