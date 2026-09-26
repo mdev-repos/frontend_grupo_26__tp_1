@@ -7,6 +7,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* --- Configurador de robot (scoped a esta página) --- */
+    .robot-config { margin-top: 1rem; }
+    .rc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .rc-group {
+      background: rgba(0, 255, 242, 0.04);
+      border: 1px solid rgba(0, 255, 242, 0.35);
+      border-radius: 4px;
+      padding: 1rem;
+    }
+    .rc-title {
+      font-family: 'Orbitron', var(--font-heading, sans-serif);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      color: #00fff2;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+    }
+    .rc-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .rc-chip {
+      font-family: 'Chakra Petch', var(--font-body, sans-serif);
+      font-size: 0.8rem;
+      color: #c7fdfb;
+      background: transparent;
+      border: 1px solid rgba(0, 255, 242, 0.4);
+      border-radius: 3px;
+      padding: 0.45rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .rc-chip:hover { border-color: #00fff2; box-shadow: 0 0 8px rgba(0, 255, 242, 0.5); }
+    .rc-chip.is-active {
+      background: rgba(0, 255, 242, 0.15);
+      border-color: #00fff2;
+      color: #eafffe;
+      box-shadow: 0 0 12px rgba(0, 255, 242, 0.65);
+    }
+    .rc-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+    .rc-readout {
+      margin-top: 1.5rem;
+      border: 1px solid rgba(255, 32, 121, 0.45);
+      background: rgba(255, 32, 121, 0.05);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      font-family: 'Chakra Petch', var(--font-body, sans-serif);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .rc-readout[hidden] { display: none; }
+    .rc-readout.is-visible { opacity: 1; transform: translateY(0); }
+    .rc-readout h3 {
+      font-family: 'Orbitron', var(--font-heading, sans-serif);
+      font-size: 0.95rem;
+      color: #ff2b79;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 0.75rem;
+    }
+    .rc-build-list, .rc-check-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.4rem; }
+    .rc-build-list li { font-size: 0.85rem; color: var(--text-muted, #b8c2c9); }
+    .rc-build-list li strong { color: #eafffe; }
+    .rc-check-list { font-size: 0.82rem; }
+    .rc-check-ok::before { content: "✓ "; }
+    .rc-check-warn::before { content: "⚠ "; }
+    .rc-check-error::before { content: "✗ "; }
+    .rc-check-info::before { content: "ℹ "; }
+    .rc-check-ok { color: #5dffb0; }
+    .rc-check-warn { color: #ffd166; }
+    .rc-check-error { color: #ff5d6c; }
+    .rc-check-info { color: #7fd8ff; }
+    .rc-verdict {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      border-radius: 3px;
+      font-family: 'Orbitron', var(--font-heading, sans-serif);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .rc-verdict.ok { background: rgba(93, 255, 176, 0.15); color: #5dffb0; border: 1px solid rgba(93, 255, 176, 0.5); }
+    .rc-verdict.warn { background: rgba(255, 209, 102, 0.15); color: #ffd166; border: 1px solid rgba(255, 209, 102, 0.5); }
+    .rc-verdict.error { background: rgba(255, 93, 108, 0.15); color: #ff5d6c; border: 1px solid rgba(255, 93, 108, 0.5); }
+    .rc-hint { font-size: 0.78rem; color: var(--text-muted, #8a97a0); margin-top: 0.5rem; }
+  </style>
 </head>
 <body>
 
@@ -19,7 +109,7 @@
         <a href="maximo.html" aria-current="page">Maximo</a>
         <a href="julian.html">Julian</a>
         <a href="martin.html">Martin</a>
-        <a href="emmanuel.html">Emmanuel</a>
+        <a href="emanuel.html">Emanuel</a>
         <a href="matias.html">Matias</a>
         <a href="bitacora.html" class="bitacora-link">Bitácora</a>
       </nav>
@@ -31,12 +121,12 @@
 
     <section class="profile-panel">
       <div class="profile-head">
-        <div class="profile-avatar"><img src="img/avatar-placeholder.svg" alt="Avatar de Maximo pendiente de carga"></div>
+        <div class="profile-avatar"><img src="img/maximo/maximo_ciber.png" alt="Avatar de Maximo en version Ciber Punk"></div>
         <div>
           <span class="profile-tag">PLAYER 01 // READY</span>
           <h1>Maximo</h1>
           <div class="profile-meta">
-            <p>📍 Ciudad: <span class="placeholder">a completar</span></p>
+            <p>📍 Ciudad: <span class="placeholder">CABA</span></p>
             <p>💻 GitHub: <a href="https://github.com/PereiraMax" target="_blank" rel="noopener">github.com/PereiraMax ↗</a></p>
           </div>
         </div>
@@ -49,27 +139,27 @@
         <button class="btn" data-scan>[ ESCANEAR HABILIDADES ]</button>
         <div style="margin-top:1.25rem;">
           <div class="skill-row">
-            <span class="skill-name">Habilidad 1</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Robotica-PLC-Control</span>
+            <div class="skill-track"><div class="skill-fill" data-value="70"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 2</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Microprocesadores CISC-RISC</span>
+            <div class="skill-track"><div class="skill-fill" data-value="80"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 3</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Pascal QBasic C C++ C# SQL VBscript Java JavaScript</span>
+            <div class="skill-track"><div class="skill-fill" data-value="70"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 4</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Hidraulica Electroneumatica Electronica</span>
+            <div class="skill-track"><div class="skill-fill" data-value="80"></div></div>
             <span class="skill-value">0%</span>
           </div>
         </div>
-        <p class="placeholder" style="margin-top:0.75rem; display:block;">Nombres de habilidades y porcentajes de ejemplo — a completar con los datos reales de Maximo.</p>
+        
       </div>
 
       <hr class="divider">
@@ -78,24 +168,24 @@
       <div class="media-grid">
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/harrypoter.jpg" alt="Pelicula de Harry Poter">
           </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <h3 class="placeholder">Harry Potter y la piedra filosofal J. K. Rowling </h3>
+          <p>Año 1997 · Género Ciencia Ficcion </p>
         </div>
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/inteligencia.jpg" alt="Inteligencia Artificial">
           </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <h3 class="placeholder">A. I. Inteligencia Artificial 2001 </h3>
+          <p>Año 2001· Género Ciencia Ficción</p>
         </div>
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/terminator.jpg" alt="Terminator II">
           </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <h3 class="placeholder">Terminator 2: el juicio final</h3>
+          <p>Año 1991. Género Ciencia Ficción</p>
         </div>
       </div>
 
@@ -105,31 +195,91 @@
       <div class="media-grid">
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/lamoscaenlasopa.jpg" alt="La Mosca en la sopa">
           </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <h3 class="placeholder">
+Patricio Rey y sus Redonditos de Ricota </h3>
+          <p>Artista Patricio Rey· Año 1991</p>
         </div>
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/rodrigo.jpg" alt="Rodrigo a 2000">
           </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <h3 class="placeholder">Cuarteto Característico Cordobés </h3>
+          <p>Artista Rodrigo Bueno· Año 2000</p>
         </div>
         <div class="media-card">
           <div class="media-thumb">
-            <img src="img/" alt="">
+            <img src="img/maximo/ondasabanera.jpg" alt="Onda Sabanera">
           </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <h3 class="placeholder">Onda Sabanera </h3>
+          <p>Claudio Benitez · Año 1998</p>
         </div>
       </div>
 
       <div class="other-members">
         <span style="color:var(--text-muted); font-family:var(--font-body);">// Otros integrantes:</span>
-        <a href="julian.html">Julian &rarr;</a> <a href="martin.html">Martin &rarr;</a> <a href="emmanuel.html">Emmanuel &rarr;</a> <a href="matias.html">Matias &rarr;</a>
+        <a href="julian.html">Julian &rarr;</a> <a href="martin.html">Martin &rarr;</a> <a href="emanuel.html">Emanuel &rarr;</a> <a href="matias.html">Matias &rarr;</a>
       </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section robot-config" id="robot-config">
+      <div class="section-head">
+        <span class="eyebrow">// TALLER DE ENSAMBLAJE</span>
+        <h2>Configurador de robot</h2>
+        <p class="hero-text" style="min-height:auto;">Elegí un motor, un sensor, un driver de control y una placa. El sistema valida en vivo si la combinación es compatible antes de ensamblar el build.</p>
+      </div>
+
+      <div class="rc-grid">
+        <div class="rc-group">
+          <h3 class="rc-title">01 // Motor</h3>
+          <div class="rc-options" data-options="motor">
+            <button type="button" class="rc-chip" data-value="cc" aria-pressed="false">Corriente continua</button>
+            <button type="button" class="rc-chip" data-value="servo" aria-pressed="false">Servomotor</button>
+            <button type="button" class="rc-chip" data-value="paso" aria-pressed="false">Motor paso a paso</button>
+          </div>
+        </div>
+
+        <div class="rc-group">
+          <h3 class="rc-title">02 // Sensor</h3>
+          <div class="rc-options" data-options="sensor">
+            <button type="button" class="rc-chip" data-value="ultrasonico" aria-pressed="false">Ultrasónico</button>
+            <button type="button" class="rc-chip" data-value="retroreflexivo" aria-pressed="false">Retroreflexivo</button>
+            <button type="button" class="rc-chip" data-value="cny70" aria-pressed="false">CNY70 (piso)</button>
+            <button type="button" class="rc-chip" data-value="brujula" aria-pressed="false">Brújula / giróscopo</button>
+          </div>
+        </div>
+
+        <div class="rc-group">
+          <h3 class="rc-title">03 // Driver de control</h3>
+          <div class="rc-options" data-options="driver">
+            <button type="button" class="rc-chip" data-value="l298" aria-pressed="false">L298</button>
+            <button type="button" class="rc-chip" data-value="rele" aria-pressed="false">Relé</button>
+            <button type="button" class="rc-chip" data-value="l293" aria-pressed="false">L293</button>
+            <button type="button" class="rc-chip" data-value="shield-l293" aria-pressed="false">Shield L293</button>
+          </div>
+        </div>
+
+        <div class="rc-group">
+          <h3 class="rc-title">04 // Placa de control</h3>
+          <div class="rc-options" data-options="control">
+            <button type="button" class="rc-chip" data-value="uno" aria-pressed="false">Arduino Uno</button>
+            <button type="button" class="rc-chip" data-value="nano" aria-pressed="false">Arduino Nano</button>
+            <button type="button" class="rc-chip" data-value="mega" aria-pressed="false">Arduino Mega</button>
+            <button type="button" class="rc-chip" data-value="nodemcu" aria-pressed="false">NodeMCU</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rc-actions">
+        <button class="btn" data-build>[ ENSAMBLAR ROBOT ]</button>
+        <button class="btn btn-ghost" data-random-build>[ AUTO CONFIG ]</button>
+        <button class="btn btn-ghost" data-reset-build>[ RESET ]</button>
+      </div>
+
+      <div class="rc-readout" data-readout hidden></div>
     </section>
   </main>
 
@@ -139,5 +289,6 @@
 
   <script src="js/main.js"></script>
   <script src="js/perfil.js"></script>
+  <script src="js/robot-config.js"></script>
 </body>
 </html>

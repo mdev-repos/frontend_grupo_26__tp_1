@@ -32,36 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
   runScan(); // ← se ejecuta automáticamente al cargar la página
   scanBtn.addEventListener("click", runScan);
 });
-
-//============================================================
-// Filtro interactivo para tarjetas música y pelis
-
-// botones que tienen el atributo data-filter (Mostrar todo, Cine, Música)
-const filterBtns = document.querySelectorAll("[data-filter]");
-
-const mediaSections = document.querySelectorAll(".media-section");
-
-if (filterBtns.length && mediaSections.length) {
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-
-     const filter = btn.dataset.filter;
-
-      filterBtns.forEach((b) => {
-        b.classList.remove("btn-alt");
-        b.classList.add("btn-ghost");
-      });
-
-
-      btn.classList.add("btn-alt");
-      btn.classList.remove("btn-ghost");
-
-      mediaSections.forEach((section) => {
-        const category = section.dataset.category;
-
-        section.style.display = (filter === "all" || category === filter) ? "block" : "none";
-      });
-    });
-  });
-}

@@ -1,172 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julian · Grupo 26 — TP1</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julian · Grupo 26 — TP1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <header class="site-nav">
-        <div class="wrap">
-            <a href="index.html" class="brand">&gt;&gt; GRUPO_<span>26</span></a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ MENÚ</button>
-            <nav class="nav-links" id="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="maximo.html">Maximo</a>
-                <a href="julian.html" aria-current="page">Julian</a>
-                <a href="martin.html">Martin</a>
-                <a href="emmanuel.html">Emmanuel</a>
-                <a href="matias.html">Matias</a>
-                <a href="bitacora.html" class="bitacora-link">Bitácora</a>
-            </nav>
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="brand">&gt;&gt; GRUPO_<span>26</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ MENÚ</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="maximo.html">Maximo</a>
+        <a href="julian.html" aria-current="page">Julian</a>
+        <a href="martin.html">Martin</a>
+        <a href="emanuel.html">Emanuel</a>
+        <a href="matias.html">Matias</a>
+        <a href="bitacora.html" class="bitacora-link">Bitácora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back-link btn btn-ghost" href="index.html">&larr; Volver al inicio</a>
+
+    <section class="profile-panel">
+      <div class="profile-head">
+        <div class="profile-avatar"><img src="img/avatar-placeholder.svg" alt="Avatar de Julian pendiente de carga"></div>
+        <div>
+          <span class="profile-tag">PLAYER 02 // READY</span>
+          <h1>Julian</h1>
+          <div class="profile-meta">
+            <p>📍 Ciudad: <span class="placeholder">a completar</span></p>
+            <p>💻 GitHub: <a href="https://github.com/juliganSW" target="_blank" rel="noopener">github.com/juliganSW ↗</a></p>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main class="wrap">
-        <a class="back-link btn btn-ghost" href="index.html">&larr; Volver al inicio</a>
+      <hr class="divider">
 
-        <section class="profile-panel">
-            <div class="profile-head">
-                <div class="profile-avatar"><img src="img/julian/avatar_julian.png" alt="Avatar de Julian"></div>
-                <div>
-                    <span class="profile-tag">PLAYER 02 // READY</span>
-                    <h1>Julian</h1>
-                    <div class="profile-meta">
-                        <p> Ciudad: <span class="placeholder">Buenos Aires</span></p>
-                        <p> GitHub: <a href="https://github.com/juliganSW" target="_blank"
-                                rel="noopener">github.com/juliganSW ↗</a></p>
-                    </div>
-                </div>
-            </div>
+      <h2>// Habilidades técnicas (skills)</h2>
+      <div class="scan-panel">
+        <button class="btn" data-scan>[ ESCANEAR HABILIDADES ]</button>
+        <div style="margin-top:1.25rem;">
+          <div class="skill-row">
+            <span class="skill-name">Habilidad 1</span>
+            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-value">0%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Habilidad 2</span>
+            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-value">0%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Habilidad 3</span>
+            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-value">0%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Habilidad 4</span>
+            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-value">0%</span>
+          </div>
+        </div>
+        <p class="placeholder" style="margin-top:0.75rem; display:block;">Nombres de habilidades y porcentajes de ejemplo — a completar con los datos reales de Julian.</p>
+      </div>
 
-            <hr class="divider">
+      <hr class="divider">
 
-            <h2>// Habilidades técnicas (skills)</h2>
-            <div class="scan-panel">
-                <button class="btn" data-scan>[ ESCANEAR HABILIDADES ]</button>
-                <div style="margin-top:1.25rem;">
-                    <div class="skill-row">
-                        <span class="skill-name">HTML / CSS</span>
-                        <div class="skill-track">
-                            <div class="skill-fill" data-value="50"></div>
-                        </div>
-                        <span class="skill-value">0%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">JAVASCRIPT</span>
-                        <div class="skill-track">
-                            <div class="skill-fill" data-value="45"></div>
-                        </div>
-                        <span class="skill-value">0%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">JAVA</span>
-                        <div class="skill-track">
-                            <div class="skill-fill" data-value="55"></div>
-                        </div>
-                        <span class="skill-value">0%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">GIT / GITHUB</span>
-                        <div class="skill-track">
-                            <div class="skill-fill" data-value="60"></div>
-                        </div>
-                        <span class="skill-value">0%</span>
-                    </div>
-                </div>
-            </div>
+      <h2>// Películas favoritas </h2>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar</h3>
+          <p>Año · Género</p>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar</h3>
+          <p>Año · Género</p>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar</h3>
+          <p>Año · Género</p>
+        </div>
+      </div>
 
-            <hr class="divider">
+      <hr class="divider">
 
-            <h2>// Galería</h2>
+      <h2>// Discos favoritos</h2>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar </h3>
+          <p>Artista · Año</p>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar </h3>
+          <p>Artista · Año</p>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb">
+            <img src="img/" alt="">
+          </div>
+          <h3 class="placeholder">Póster a completar </h3>
+          <p>Artista · Año</p>
+        </div>
+      </div>
 
-            <!-- Barra de filtros -->
-            <div class="media-filter-bar" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-alt" data-filter="all">[ MOSTRAR TODO ]</button>
-                <button class="btn btn-ghost" data-filter="movies">[ CINE ]</button>
-                <button class="btn btn-ghost" data-filter="music">[ MÚSICA ]</button>
-            </div>
+      <div class="other-members">
+        <span style="color:var(--text-muted); font-family:var(--font-body);">// Otros integrantes:</span>
+        <a href="maximo.html">Maximo &rarr;</a> <a href="martin.html">Martin &rarr;</a> <a href="emanuel.html">Emanuel &rarr;</a> <a href="matias.html">Matias &rarr;</a>
+      </div>
+    </section>
+  </main>
 
-            <!-- Películas -->
-            <div class="media-section" data-category="movies">
-                <h2>// Películas favoritas</h2>
-                <div class="media-grid">
-                    <div class="media-card">
-                        <div class="media-thumb"><img src="img/julian/starWars_poster.jpg" alt="poster star wars"></div>
-                        <h3 class="placeholder">El imperio contraataca</h3>
-                        <p>1980 · Aventura/Fantasía</p>
-                    </div>
-                    <div class="media-card">
-                        <div class="media-thumb">
-                            <img src="img/julian/BTF_poster.jpg" alt="poster volver al futuro">
-                        </div>
-                        <h3 class="placeholder">Volver al futuro</h3>
-                        <p>1985 · Ciencia Ficción/Aventura</p>
-                    </div>
-                    <div class="media-card">
-                        <div class="media-thumb">
-                            <img src="img/julian/inglourious_basterds_poster.webp" alt="poster bastardos sin gloria">
-                        </div>
-                        <h3 class="placeholder">Bastardos sin gloria</h3>
-                        <p>2009 · Drama/Bélico</p>
-                    </div>
-                </div>
-            </div>
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Grupo 26 · Desarrollo de Sistemas Web</div>
+  </footer>
 
-            <hr class="divider">
-
-            <!-- Discos -->
-            <div class="media-section" data-category="music">
-                <h2>// Discos favoritos</h2>
-                <div class="media-grid">
-                    <div class="media-card">
-                        <div class="media-thumb"><img src="img/julian/metallica_album.jpg"
-                                alt="disco Master of Puppets"></div>
-                        <h3 class="placeholder">Master of Puppets</h3>
-                        <p>Metallica · 1986</p>
-                    </div>
-                    <div class="media-card">
-                        <div class="media-thumb">
-                            <img src="img/julian/megadeth_album.jpg" alt="disco countdown to extinction">
-                        </div>
-                        <h3 class="placeholder">Countdown to Extinction</h3>
-                        <p>Megadeth · 1992</p>
-                    </div>
-                    <div class="media-card">
-                        <div class="media-thumb">
-                            <img src="img/julian/nirvana_album.jpg" alt="disco nevermind">
-                        </div>
-                        <h3 class="placeholder">Nevermind</h3>
-                        <p>Nirvana · 1991</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="other-members" style="margin-top: 2rem;">
-                <span style="color:var(--text-muted); font-family:var(--font-body);">// Otros integrantes:</span>
-                <a href="maximo.html">Maximo &rarr;</a>
-                <a href="martin.html">Martin &rarr;</a>
-                <a href="emanuel.html">Emanuel &rarr;</a>
-                <a href="matias.html">Matias &rarr;</a>
-            </div>
-
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="wrap">© 2026 Grupo 26 · Desarrollo de Sistemas Web</div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/perfil.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/perfil.js"></script>
 </body>
-
 </html>
