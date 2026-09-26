@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bitácora · Grupo 26 — TP1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&family=Saira+Stencil+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -47,8 +47,24 @@
         <p>Varié los porcentajes de skills (90/85/80/70, antes 4×100%) y sumé lightbox propio en <code>emmanuel.html</code>: click en una tarjeta de película/disco la abre en grande y cierra con Esc, botón o click fuera (<code>js/emmanuel.js</code> nuevo + estilos en <code>css/style.css</code>). Descarté la tabla terminal para no duplicar la info de las barras. Sin cambios en <code>main.js</code>/<code>perfil.js</code>; actualicé mi bloque del README (función + criterio propio).</p>
       </div>
       <div class="log-entry">
-        <time>A completar — Sesión 3</time>
-        <p class="placeholder">Registrar acá el avance de los perfiles individuales, fotos/avatares definitivos y ajustes responsive.</p>
+        <time>2026-09-26 — Matias (rama perfil/matias)</time>
+        <p>Sobre la base de Martin y el template de perfil: avatar propio generado con IA (estética cyberpunk, <code>img/matias/avatar_matias.png</code>), ciudad (Tablada, Buenos Aires) y edad (36), 4 habilidades (Java/Spring, Mainframe, Backend, Ingeniería de Software), 3 películas (Matrix, Terminator 2, Forrest Gump) y 3 discos (Rust in Peace, Dirt, Nostalgia in Times Square) con carátulas en <code>img/matias/</code>. Sin cambios en <code>perfil.js</code>. Sumé una función propia — <code>js/matias.js</code> — una "Terminal Mainframe" con botones de comandos falsos (<code>whoami</code>, <code>jobs --list</code>, <code>status</code>, <code>wake_up</code>) que tipean la respuesta letra por letra; el comando <code>wake_up</code> tira una referencia a Matrix ("follow the white rabbit"). Actualicé mi tarjeta en la portada y mi bloque de uso de IA en el README.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-26 — Matias, revisión de consistencia</time>
+        <p><strong>Bug de tipografía detectado y corregido en mis páginas</strong> (<code>matias.html</code> y <code>bitacora.html</code>): el logo <code>&gt;&gt; GRUPO_26</code> usa <code>.brand</code>, que pide "Saira Stencil One" y cae a Orbitron si no está cargada. <code>index.html</code> y <code>martin.html</code> sí cargan esa fuente (+ Share Tech Mono) en el <code>&lt;head&gt;</code>; el resto de las páginas no, por eso el logo se veía distinto según la página. Lo arreglé en mis dos archivos, pero <strong>falta corregir el mismo `&lt;link&gt;` de Google Fonts en <code>julian.html</code>, <code>emmanuel.html</code> y <code>maximo.html</code></strong> (copiar la línea de fonts de <code>martin.html</code>) para que el logo se vea igual en todo el sitio.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-26 — Matias, tema para decidir en grupo</time>
+        <p><strong>"Auto Pick Character" deja la tarjeta resaltada para siempre.</strong> En <code>js/main.js</code>, el click del botón `[ AUTO PICK CHARACTER ]` limpia el borde de todas las tarjetas y le pone `border-color: magenta` inline a la elegida al azar — pero ese estilo inline no se borra con nada más (pasar el mouse por otra tarjeta solo dispara el `:hover` normal, que es temporal y no toca el estilo inline de la tarjeta ya elegida). Resultado: la tarjeta sorteada queda marcada indefinidamente hasta el próximo click de "Auto Pick" (se resetea solo si recargás <code>index.html</code>). No parece un objetivo de diseño explícito, más bien un detalle sin pulir de la primera versión. Lo dejamos para que el grupo decida si vale la pena ajustarlo (por ejemplo, limpiar el resaltado anterior al pasar el mouse por otra tarjeta) antes de la entrega — no lo toqué porque es código compartido de Martin.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-26 — Matias, tema para decidir en grupo</time>
+        <p><strong>El glitch del título en "Reiniciar transmisión" queda pegado, no es pasajero.</strong> En <code>css/style.css</code>, la clase <code>.is-glitching</code> dispara 3 iteraciones de animación (~1 segundo) que mueven el título y superponen dos capas duplicadas — una cian y otra magenta, cada una recortada con <code>clip-path</code> — para simular el desfasaje de color típico del efecto glitch. El problema es que <code>js/main.js</code> agrega la clase <code>is-glitching</code> al <code>&lt;h1&gt;</code> pero nunca la saca: el movimiento se detiene al terminar las 3 iteraciones, pero las dos capas de color (cian/magenta) quedan visibles para siempre, así que el título se ve "partido en colores" de forma permanente después del primer click, no como un parpadeo momentáneo. Habría que decidir en grupo si eso es lo que se busca (un glitch fijo, como marca visual del sitio) o si conviene que <code>main.js</code> saque la clase <code>is-glitching</code> con un <code>setTimeout</code> al terminar la animación, para que sea pasajero — más acorde al concepto real de "glitch". No lo toqué porque también es código compartido de Martin.</p>
+      </div>
+      <div class="log-entry">
+        <time>A completar — Sesión 4</time>
+        <p class="placeholder">Registrar acá lo que falte: perfil de Maximo, capturas de pantalla, publicación en Vercel y ajustes responsive finales.</p>
       </div>
     </section>
   </main>
