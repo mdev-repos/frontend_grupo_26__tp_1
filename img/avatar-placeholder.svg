@@ -1,0 +1,25 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#100826"/>
+      <stop offset="100%" stop-color="#1b0e3d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#05d9e8"/>
+      <stop offset="100%" stop-color="#ff2079"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#bg)"/>
+  <g opacity="0.15">
+    <line x1="0" y1="40" x2="300" y2="40" stroke="#05d9e8" stroke-width="1"/>
+    <line x1="0" y1="90" x2="300" y2="90" stroke="#05d9e8" stroke-width="1"/>
+    <line x1="0" y1="140" x2="300" y2="140" stroke="#05d9e8" stroke-width="1"/>
+    <line x1="0" y1="190" x2="300" y2="190" stroke="#05d9e8" stroke-width="1"/>
+    <line x1="0" y1="240" x2="300" y2="240" stroke="#05d9e8" stroke-width="1"/>
+  </g>
+  <path d="M150 60 L190 90 L190 150 Q190 210 150 230 Q110 210 110 150 L110 90 Z"
+        fill="none" stroke="url(#glow)" stroke-width="3"/>
+  <circle cx="150" cy="128" r="26" fill="none" stroke="url(#glow)" stroke-width="3"/>
+  <path d="M112 205 Q150 175 188 205 L188 232 L112 232 Z" fill="none" stroke="url(#glow)" stroke-width="3"/>
+  <text x="150" y="275" text-anchor="middle" font-family="monospace" font-size="14" fill="#7d8bab" letter-spacing="2">SIN_IMAGEN.DAT</text>
+</svg>

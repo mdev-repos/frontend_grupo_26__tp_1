@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora · Grupo 26 — TP1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="brand">&gt;&gt; GRUPO_<span>26</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ MENÚ</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="maximo.html">Maximo</a>
+        <a href="julian.html">Julian</a>
+        <a href="martin.html">Martin</a>
+        <a href="emmanuel.html">Emmanuel</a>
+        <a href="matias.html">Matias</a>
+        <a href="bitacora.html" class="bitacora-link" aria-current="page">Bitácora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="border-bottom:none; padding-bottom:1.5rem;">
+      <span class="eyebrow">// REGISTRO DE PROCESO</span>
+      <h1 style="font-size:clamp(1.6rem,4vw,2.4rem);">Bitácora del proyecto</h1>
+      <p class="hero-text" style="min-height:auto;">Acá documentamos decisiones, dificultades y cambios a medida que avanza el TP. Sumen una entrada por cada sesión de trabajo relevante.</p>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="log-entry">
+        <time>2026-09-22/23 — Base de Martin (rama tematica-cyberpunk-2077)</time>
+        <p>Martin aportó la estructura base que usamos todos: temática inspirada en Cyberpunk 2077, paleta cian/magenta, tipografías Orbitron + Chakra Petch, HTMLs en raíz con <code>css/</code>, <code>js/</code> e <code>img/</code> separados, portada con efecto typewriter + auto-pick de personaje, <code>perfil.js</code> con escaneo animado de habilidades, breakpoints en 400/900/1200 y su perfil completo como ejemplo a seguir. Documentado por Emmanuel a partir del historial de la rama.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-24 — Emmanuel (rama Emmanuel/perfil)</time>
+        <p>Sobre la base de Martin y siguiendo su template de perfil: foto propia reutilizada de la PFO1 (<code>img/emmanuel/emma.jpg</code>), ciudad (Mendoza) y edad (35), 4 habilidades del stack .NET, 3 películas + 3 discos con año y género verificados, y pósters/carátulas en <code>img/emmanuel/</code> con nombres normalizados. Sin cambios en <code>perfil.js</code>. Actualicé mi tarjeta en la portada. Primera pasada al README: título y descripción reales, integrantes, tecnologías, estructura, guía de estilos con la paleta del CSS, explicación de las funciones JS, sección de evolución y mi bloque de uso de IA; dejé marcadores pendientes (capturas, URL de Vercel, origen de imágenes y bloques de IA del resto) para completar en grupo.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-25 — Emmanuel (rama Emmanuel/perfil)</time>
+        <p>Varié los porcentajes de skills (90/85/80/70, antes 4×100%) y sumé lightbox propio en <code>emmanuel.html</code>: click en una tarjeta de película/disco la abre en grande y cierra con Esc, botón o click fuera (<code>js/emmanuel.js</code> nuevo + estilos en <code>css/style.css</code>). Descarté la tabla terminal para no duplicar la info de las barras. Sin cambios en <code>main.js</code>/<code>perfil.js</code>; actualicé mi bloque del README (función + criterio propio).</p>
+      </div>
+      <div class="log-entry">
+        <time>A completar — Sesión 3</time>
+        <p class="placeholder">Registrar acá el avance de los perfiles individuales, fotos/avatares definitivos y ajustes responsive.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Grupo 26 · Desarrollo de Sistemas Web</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
