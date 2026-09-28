@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (heroText) {
     const fullText = heroText.getAttribute("data-typewriter");
     let typingTimer = null;
+    let glitchTimer = null;
 
     function typeText() {
       heroText.innerHTML = '<span class="cursor">&nbsp;</span>';
@@ -43,24 +44,38 @@ document.addEventListener("DOMContentLoaded", () => {
       replayBtn.addEventListener("click", () => {
         typeText();
         if (heroTitle) {
+          clearTimeout(glitchTimer);
           heroTitle.classList.remove("is-glitching");
-          // forzar reflow para poder reiniciar la animación
           void heroTitle.offsetWidth;
           heroTitle.classList.add("is-glitching");
+          glitchTimer = setTimeout(() => {
+            heroTitle.classList.remove("is-glitching");
+          }, 1100);
         }
       });
     }
   }
 
-  // Selección aleatoria de personaje ("AUTO PICK") en la portada
   const autoPickBtn = document.querySelector("[data-autopick]");
   const teamCards = document.querySelectorAll(".team-card");
+
+  function pickCard(card) {
+    teamCards.forEach((c) => c.style.borderColor = "");
+    card.style.borderColor = "var(--magenta)";
+  }
+
   if (autoPickBtn && teamCards.length) {
     autoPickBtn.addEventListener("click", () => {
-      teamCards.forEach((c) => c.style.borderColor = "");
       const pick = teamCards[Math.floor(Math.random() * teamCards.length)];
-      pick.style.borderColor = "var(--magenta)";
+      pickCard(pick);
       pick.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
+
+  teamCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      pickCard(card);
+    });
+  });
 });

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d1f"/>
+      <stop offset="100%" stop-color="#04050d"/>
+    </linearGradient>
+  </defs>
+  <polygon points="14,3 50,3 61,14 61,50 50,61 14,61 3,50 3,14" fill="url(#badgeGrad)" stroke="#a45bff" stroke-width="2.5"/>
+  <g>
+    <rect x="18.00" y="21.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="21.00" y="21.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="24.00" y="21.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="15.00" y="24.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="27.00" y="24.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="27.00" y="27.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="24.00" y="30.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="21.00" y="33.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="18.00" y="36.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="15.00" y="39.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="18.00" y="39.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="21.00" y="39.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="24.00" y="39.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="27.00" y="39.50" width="3" height="3" fill="#02d7f2" opacity="1"/>
+    <rect x="40.00" y="21.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="43.00" y="21.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="37.00" y="24.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="34.00" y="27.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="34.00" y="30.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="37.00" y="30.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="40.00" y="30.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="43.00" y="30.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="34.00" y="33.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="46.00" y="33.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="34.00" y="36.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="46.00" y="36.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="37.00" y="39.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="40.00" y="39.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+    <rect x="43.00" y="39.50" width="3" height="3" fill="#ff2a6d" opacity="1"/>
+  </g>
+</svg>

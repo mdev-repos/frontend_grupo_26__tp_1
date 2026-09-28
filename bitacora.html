@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&family=Saira+Stencil+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="img/branding/favicon-equipo26.svg">
 </head>
 <body>
 
@@ -43,28 +44,38 @@
         <p>Sobre la base de Martin y siguiendo su template de perfil: foto propia reutilizada de la PFO1 (<code>img/emmanuel/emma.jpg</code>), ciudad (Mendoza) y edad (35), 4 habilidades del stack .NET, 3 películas + 3 discos con año y género verificados, y pósters/carátulas en <code>img/emmanuel/</code> con nombres normalizados. Sin cambios en <code>perfil.js</code>. Actualicé mi tarjeta en la portada. Primera pasada al README: título y descripción reales, integrantes, tecnologías, estructura, guía de estilos con la paleta del CSS, explicación de las funciones JS, sección de evolución y mi bloque de uso de IA; dejé marcadores pendientes (capturas, URL de Vercel, origen de imágenes y bloques de IA del resto) para completar en grupo.</p>
       </div>
       <div class="log-entry">
+        <time>2026-09-24 — Julian (rama perfil-julian)</time>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: ciudad (Buenos Aires), 4 habilidades (HTML/CSS, JavaScript, Java, Git/GitHub), 3 películas (El imperio contraataca, Volver al futuro, Bastardos sin gloria) y 3 discos (Master of Puppets, Countdown to Extinction, Nevermind).</p>
+      </div>
+      <div class="log-entry">
         <time>2026-09-25 — Emmanuel (rama Emmanuel/perfil)</time>
         <p>Varié los porcentajes de skills (90/85/80/70, antes 4×100%) y sumé lightbox propio en <code>emmanuel.html</code>: click en una tarjeta de película/disco la abre en grande y cierra con Esc, botón o click fuera (<code>js/emmanuel.js</code> nuevo + estilos en <code>css/style.css</code>). Descarté la tabla terminal para no duplicar la info de las barras. Sin cambios en <code>main.js</code>/<code>perfil.js</code>; actualicé mi bloque del README (función + criterio propio).</p>
       </div>
       <div class="log-entry">
+        <time>2026-09-25 — Julian (rama perfil-julian)</time>
+        <p><strong>Desarrollo.</strong> Sumó una función propia: <strong>filtro de contenido</strong> en <code>julian.html</code> (ampliación de <code>js/perfil.js</code>). Botones <code>[ MOSTRAR TODO / CINE / MÚSICA ]</code> que muestran u ocultan las secciones de películas y discos (<code>.media-section</code>) según el atributo <code>data-filter</code>/<code>data-category</code>. No modifica <code>main.js</code>.</p>
+      </div>
+      <div class="log-entry">
         <time>2026-09-26 — Matias (rama perfil/matias)</time>
-        <p>Sobre la base de Martin y el template de perfil: avatar propio generado con IA (estética cyberpunk, <code>img/matias/avatar_matias.png</code>), ciudad (Tablada, Buenos Aires) y edad (36), 4 habilidades (Java/Spring, Mainframe, Backend, Ingeniería de Software), 3 películas (Matrix, Terminator 2, Forrest Gump) y 3 discos (Rust in Peace, Dirt, Nostalgia in Times Square) con carátulas en <code>img/matias/</code>. Sin cambios en <code>perfil.js</code>. Sumé una función propia — <code>js/matias.js</code> — una "Terminal Mainframe" con botones de comandos falsos (<code>whoami</code>, <code>jobs --list</code>, <code>status</code>, <code>wake_up</code>) que tipean la respuesta letra por letra; el comando <code>wake_up</code> tira una referencia a Matrix ("follow the white rabbit"). Actualicé mi tarjeta en la portada y mi bloque de uso de IA en el README.</p>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: avatar generado con IA, ciudad, edad, 4 habilidades, 3 películas y 3 discos. Sumé una función propia — "Terminal Mainframe" (<code>js/matias.js</code>) — con comandos falsos que tipean su respuesta, incluida una referencia a Matrix.</p>
+        <p><strong>Bug.</strong> Detecté que el logo del header se veía distinto según la página: faltaba cargar la fuente "Saira Stencil One" en el <code>&lt;head&gt;</code> de varios perfiles. Corregido en los míos y avisado al resto del equipo. <strong>SOLUCIONADO</strong></p>
+        <p><strong>Diseño.</strong> Detecté dos comportamientos poco pulidos en <code>js/main.js</code>: el resaltado de "Auto Pick Character" queda pegado para siempre en vez de liberarse, y el glitch del título en "Reiniciar transmisión" también queda fijo en lugar de ser pasajero. Quedan anotados para resolver en la próxima sesión.</p>
       </div>
       <div class="log-entry">
-        <time>2026-09-26 — Matias, revisión de consistencia</time>
-        <p><strong>Bug de tipografía detectado y corregido en mis páginas</strong> (<code>matias.html</code> y <code>bitacora.html</code>): el logo <code>&gt;&gt; GRUPO_26</code> usa <code>.brand</code>, que pide "Saira Stencil One" y cae a Orbitron si no está cargada. <code>index.html</code> y <code>martin.html</code> sí cargan esa fuente (+ Share Tech Mono) en el <code>&lt;head&gt;</code>; el resto de las páginas no, por eso el logo se veía distinto según la página. Lo arreglé en mis dos archivos, pero <strong>falta corregir el mismo `&lt;link&gt;` de Google Fonts en <code>julian.html</code>, <code>emmanuel.html</code> y <code>maximo.html</code></strong> (copiar la línea de fonts de <code>martin.html</code>) para que el logo se vea igual en todo el sitio.</p>
+        <time>2026-09-27 — Maximo (rama perfil-Ariel)</time>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: avatar en versión cyberpunk, ciudad (CABA), 4 habilidades orientadas a automatización industrial (robótica/PLC, microprocesadores CISC-RISC, varios lenguajes, electrónica/hidráulica/electroneumática), 3 películas y 3 discos con fotos e imágenes propias en <code>img/maximo/</code>.</p>
+        <p><strong>Desarrollo.</strong> Sumó una función propia bastante más ambiciosa que una barra de progreso: un <strong>configurador de robot</strong> (<code>js/robot-config.js</code>, sección aparte en <code>maximo.html</code>). Se elige un motor, un sensor, un driver y una placa de control por chips, y al ensamblar el sistema valida en vivo si la combinación es compatible a nivel hardware (por ejemplo, si el driver soporta ese motor, si el driver físico entra en esa placa, o si hay conflicto de pines analógicos) y devuelve un reporte estilo terminal con veredicto: compilación exitosa, viable con advertencias, o conflicto de hardware. Suma también botones de auto-configuración aleatoria y reset. No modifica <code>main.js</code> ni <code>perfil.js</code>.</p>
       </div>
       <div class="log-entry">
-        <time>2026-09-26 — Matias, tema para decidir en grupo</time>
-        <p><strong>"Auto Pick Character" deja la tarjeta resaltada para siempre.</strong> En <code>js/main.js</code>, el click del botón `[ AUTO PICK CHARACTER ]` limpia el borde de todas las tarjetas y le pone `border-color: magenta` inline a la elegida al azar — pero ese estilo inline no se borra con nada más (pasar el mouse por otra tarjeta solo dispara el `:hover` normal, que es temporal y no toca el estilo inline de la tarjeta ya elegida). Resultado: la tarjeta sorteada queda marcada indefinidamente hasta el próximo click de "Auto Pick" (se resetea solo si recargás <code>index.html</code>). No parece un objetivo de diseño explícito, más bien un detalle sin pulir de la primera versión. Lo dejamos para que el grupo decida si vale la pena ajustarlo (por ejemplo, limpiar el resaltado anterior al pasar el mouse por otra tarjeta) antes de la entrega — no lo toqué porque es código compartido de Martin.</p>
+        <time>2026-09-28 — Matias (rama main)</time>
+        <p><strong>Diseño.</strong> Resueltos los dos detalles anotados el 26/9: el glitch del título ahora se apaga solo con un <code>setTimeout</code> al terminar la animación, y ahora también se puede seleccionar una tarjeta con un click directo (además del "Auto Pick"), liberando automáticamente la que estaba marcada antes. <strong>SOLUCIONADO</strong></p>
+        <p><strong>Deploy.</strong> Publicado el sitio en Vercel y agregada la URL al README.</p>
+        <p><strong>Documentación.</strong> Repaso general del README (estructura de carpetas, funciones JS de cada perfil, capturas) de cara a la entrega final.</p>
+        <p><strong>Diseño.</strong> Sumé un favicon (<code>img/branding/favicon-equipo26.svg</code>, "26" en cian/magenta) cableado en el <code>&lt;head&gt;</code> de las 7 páginas del sitio.</p>
       </div>
       <div class="log-entry">
-        <time>2026-09-26 — Matias, tema para decidir en grupo</time>
-        <p><strong>El glitch del título en "Reiniciar transmisión" queda pegado, no es pasajero.</strong> En <code>css/style.css</code>, la clase <code>.is-glitching</code> dispara 3 iteraciones de animación (~1 segundo) que mueven el título y superponen dos capas duplicadas — una cian y otra magenta, cada una recortada con <code>clip-path</code> — para simular el desfasaje de color típico del efecto glitch. El problema es que <code>js/main.js</code> agrega la clase <code>is-glitching</code> al <code>&lt;h1&gt;</code> pero nunca la saca: el movimiento se detiene al terminar las 3 iteraciones, pero las dos capas de color (cian/magenta) quedan visibles para siempre, así que el título se ve "partido en colores" de forma permanente después del primer click, no como un parpadeo momentáneo. Habría que decidir en grupo si eso es lo que se busca (un glitch fijo, como marca visual del sitio) o si conviene que <code>main.js</code> saque la clase <code>is-glitching</code> con un <code>setTimeout</code> al terminar la animación, para que sea pasajero — más acorde al concepto real de "glitch". No lo toqué porque también es código compartido de Martin.</p>
-      </div>
-      <div class="log-entry">
-        <time>A completar — Sesión 4</time>
-        <p class="placeholder">Registrar acá lo que falte: perfil de Maximo, capturas de pantalla, publicación en Vercel y ajustes responsive finales.</p>
+        <time>Pendiente antes de entregar</time>
+        <p class="placeholder">Falta agregar el campo "Edad" en los perfiles de Martin, Julian y Maximo (lo tienen Emmanuel y Matias) y completar los bloques de Uso de IA de Maximo, Julian y Martin en el README.</p>
       </div>
     </section>
   </main>
