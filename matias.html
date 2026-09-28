@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matias · Grupo 26 — TP1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&family=Saira+Stencil+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="img/branding/favicon-equipo26.svg">
 </head>
 <body>
 
@@ -31,12 +32,12 @@
 
     <section class="profile-panel">
       <div class="profile-head">
-        <div class="profile-avatar"><img src="img/avatar-placeholder.svg" alt="Avatar de Matias pendiente de carga"></div>
+        <div class="profile-avatar"><img src="img/matias/avatar_matias.png" alt="Avatar cyberpunk de Matias, generado con IA"></div>
         <div>
           <span class="profile-tag">PLAYER 05 // READY</span>
           <h1>Matias</h1>
           <div class="profile-meta">
-            <p>📍 Ciudad: <span class="placeholder">a completar</span></p>
+            <p>📍 Ciudad: <span class="placeholder">Tablada, Buenos Aires</span> · 🎂 Edad: <span class="placeholder">36</span></p>
             <p>💻 GitHub: <a href="https://github.com/mdev-repos" target="_blank" rel="noopener">github.com/mdev-repos ↗</a></p>
           </div>
         </div>
@@ -49,27 +50,43 @@
         <button class="btn" data-scan>[ ESCANEAR HABILIDADES ]</button>
         <div style="margin-top:1.25rem;">
           <div class="skill-row">
-            <span class="skill-name">Habilidad 1</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Java / Spring</span>
+            <div class="skill-track"><div class="skill-fill" data-value="87"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 2</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Mainframe (COBOL)</span>
+            <div class="skill-track"><div class="skill-fill" data-value="85"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 3</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Backend</span>
+            <div class="skill-track"><div class="skill-fill" data-value="90"></div></div>
             <span class="skill-value">0%</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name">Habilidad 4</span>
-            <div class="skill-track"><div class="skill-fill" data-value="0"></div></div>
+            <span class="skill-name">Ingeniería de Software</span>
+            <div class="skill-track"><div class="skill-fill" data-value="83"></div></div>
             <span class="skill-value">0%</span>
           </div>
         </div>
-        <p class="placeholder" style="margin-top:0.75rem; display:block;">Nombres de habilidades y porcentajes de ejemplo — a completar con los datos reales de Matias.</p>
+      </div>
+
+      <hr class="divider">
+
+      <h2>// Terminal Mainframe <span style="color:var(--text-muted); font-family:var(--font-body); font-weight:400; font-size:0.7rem; text-transform:none;">(interacción propia)</span></h2>
+      <div class="mf-terminal">
+        <div class="mf-terminal-bar">
+          <span class="mf-terminal-dot"></span><span class="mf-terminal-dot"></span><span class="mf-terminal-dot"></span>
+          <span class="mf-terminal-title">SYS://MATIAS_MAINFRAME</span>
+        </div>
+        <div class="mf-terminal-screen" id="mfScreen" aria-live="polite">&gt; Sistema listo. Elegí un comando.</div>
+        <div class="mf-terminal-cmds">
+          <button class="btn btn-alt" data-mf-cmd="whoami">[ whoami ]</button>
+          <button class="btn btn-alt" data-mf-cmd="jobs">[ jobs --list ]</button>
+          <button class="btn btn-alt" data-mf-cmd="status">[ status ]</button>
+          <button class="btn" data-mf-cmd="wake">[ wake_up ]</button>
+        </div>
       </div>
 
       <hr class="divider">
@@ -77,25 +94,19 @@
       <h2>// Películas favoritas </h2>
       <div class="media-grid">
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <div class="media-thumb"><img src="img/matias/matrix.jpeg" alt="Póster de Matrix" loading="lazy"></div>
+          <h3 class="placeholder">Matrix</h3>
+          <p>1999 · Ciencia ficción</p>
         </div>
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <div class="media-thumb"><img src="img/matias/terminator2.jpeg" alt="Póster de Terminator 2: Judgment Day" loading="lazy"></div>
+          <h3 class="placeholder">Terminator 2: Judgment Day</h3>
+          <p>1991 · Acción / Ciencia ficción</p>
         </div>
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar</h3>
-          <p>Año · Género</p>
+          <div class="media-thumb"><img src="img/matias/forestgump.jpeg" alt="Póster de Forrest Gump" loading="lazy"></div>
+          <h3 class="placeholder">Forrest Gump</h3>
+          <p>1994 · Drama</p>
         </div>
       </div>
 
@@ -104,25 +115,19 @@
       <h2>// Discos favoritos</h2>
       <div class="media-grid">
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <div class="media-thumb"><img src="img/matias/m_rip.jpg" alt="Portada del disco Rust in Peace" loading="lazy"></div>
+          <h3 class="placeholder">Rust in Peace</h3>
+          <p>Megadeth · 1990</p>
         </div>
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <div class="media-thumb"><img src="img/matias/aic_dirt.jpg" alt="Portada del disco Dirt" loading="lazy"></div>
+          <h3 class="placeholder">Dirt</h3>
+          <p>Alice in Chains · 1992</p>
         </div>
         <div class="media-card">
-          <div class="media-thumb">
-            <img src="img/" alt="">
-          </div>
-          <h3 class="placeholder">Póster a completar </h3>
-          <p>Artista · Año</p>
+          <div class="media-thumb"><img src="img/matias/jazz.jpeg" alt="Portada del disco Nostalgia in Times Square" loading="lazy"></div>
+          <h3 class="placeholder">Nostalgia in Times Square</h3>
+          <p>Mingus Big Band · 1993</p>
         </div>
       </div>
 
@@ -139,5 +144,6 @@
 
   <script src="js/main.js"></script>
   <script src="js/perfil.js"></script>
+  <script src="js/matias.js"></script>
 </body>
 </html>

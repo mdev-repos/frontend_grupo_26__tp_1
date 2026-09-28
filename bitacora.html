@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bitácora · Grupo 26 — TP1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&family=Saira+Stencil+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="img/branding/favicon-equipo26.svg">
 </head>
 <body>
 
@@ -40,15 +41,49 @@
       </div>
       <div class="log-entry">
         <time>2026-09-24 — Emmanuel (rama Emmanuel/perfil)</time>
-        <p>Sobre la base de Martin y siguiendo su template de perfil: foto propia reutilizada de la PFO1 (<code>img/emmanuel/Emma.png</code>), ciudad (Mendoza) y edad (35), 4 habilidades del stack .NET, 3 películas + 3 discos con año y género verificados, y pósters/carátulas en <code>img/emmanuel/</code> con nombres normalizados. Sin cambios en <code>perfil.js</code>. Actualicé mi tarjeta en la portada. Primera pasada al README: título y descripción reales, integrantes, tecnologías, estructura, guía de estilos con la paleta del CSS, explicación de las funciones JS, sección de evolución y mi bloque de uso de IA; dejé marcadores pendientes (capturas, URL de Vercel, origen de imágenes y bloques de IA del resto) para completar en grupo.</p>
+        <p>Sobre la base de Martin y siguiendo su template de perfil: foto propia reutilizada de la PFO1 (<code>img/emmanuel/emma.jpg</code>), ciudad (Mendoza) y edad (35), 4 habilidades del stack .NET, 3 películas + 3 discos con año y género verificados, y pósters/carátulas en <code>img/emmanuel/</code> con nombres normalizados. Sin cambios en <code>perfil.js</code>. Actualicé mi tarjeta en la portada. Primera pasada al README: título y descripción reales, integrantes, tecnologías, estructura, guía de estilos con la paleta del CSS, explicación de las funciones JS, sección de evolución y mi bloque de uso de IA; dejé marcadores pendientes (capturas, URL de Vercel, origen de imágenes y bloques de IA del resto) para completar en grupo.</p>
       </div>
       <div class="log-entry">
-        <time>A completar — Sesión 2</time>
-        <p class="placeholder">Registrar acá decisiones de diseño, dificultades técnicas o cambios de alcance.</p>
+        <time>2026-09-24 — Julian (rama perfil-julian)</time>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: ciudad (Buenos Aires), 4 habilidades (HTML/CSS, JavaScript, Java, Git/GitHub), 3 películas (El imperio contraataca, Volver al futuro, Bastardos sin gloria) y 3 discos (Master of Puppets, Countdown to Extinction, Nevermind).</p>
       </div>
       <div class="log-entry">
-        <time>A completar — Sesión 3</time>
-        <p class="placeholder">Registrar acá el avance de los perfiles individuales, fotos/avatares definitivos y ajustes responsive.</p>
+        <time>2026-09-25 — Emmanuel (rama Emmanuel/perfil)</time>
+        <p>Varié los porcentajes de skills (90/85/80/70, antes 4×100%) y sumé lightbox propio en <code>emmanuel.html</code>: click en una tarjeta de película/disco la abre en grande y cierra con Esc, botón o click fuera (<code>js/emmanuel.js</code> nuevo + estilos en <code>css/style.css</code>). Descarté la tabla terminal para no duplicar la info de las barras. Sin cambios en <code>main.js</code>/<code>perfil.js</code>; actualicé mi bloque del README (función + criterio propio).</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-25 — Julian (rama perfil-julian)</time>
+        <p><strong>Desarrollo.</strong> Sumó una función propia: <strong>filtro de contenido</strong> en <code>julian.html</code> (ampliación de <code>js/perfil.js</code>). Botones <code>[ MOSTRAR TODO / CINE / MÚSICA ]</code> que muestran u ocultan las secciones de películas y discos (<code>.media-section</code>) según el atributo <code>data-filter</code>/<code>data-category</code>. No modifica <code>main.js</code>.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-26 — Matias (rama perfil/matias)</time>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: avatar generado con IA, ciudad, edad, 4 habilidades, 3 películas y 3 discos. Sumé una función propia — "Terminal Mainframe" (<code>js/matias.js</code>) — con comandos falsos que tipean su respuesta, incluida una referencia a Matrix.</p>
+        <p><strong>Bug.</strong> Detecté que el logo del header se veía distinto según la página: faltaba cargar la fuente "Saira Stencil One" en el <code>&lt;head&gt;</code> de varios perfiles. Corregido en los míos y avisado al resto del equipo. <strong>SOLUCIONADO</strong></p>
+        <p><strong>Diseño.</strong> Detecté dos comportamientos poco pulidos en <code>js/main.js</code>: el resaltado de "Auto Pick Character" queda pegado para siempre en vez de liberarse, y el glitch del título en "Reiniciar transmisión" también queda fijo en lugar de ser pasajero. Quedan anotados para resolver en la próxima sesión.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-27 — Maximo (rama perfil-Ariel)</time>
+        <p><strong>Desarrollo.</strong> Perfil propio sobre el template de Martin: avatar en versión cyberpunk, ciudad (CABA), 4 habilidades orientadas a automatización industrial (robótica/PLC, microprocesadores CISC-RISC, varios lenguajes, electrónica/hidráulica/electroneumática), 3 películas y 3 discos con fotos e imágenes propias en <code>img/maximo/</code>.</p>
+        <p><strong>Desarrollo.</strong> Sumó una función propia bastante más ambiciosa que una barra de progreso: un <strong>configurador de robot</strong> (<code>js/robot-config.js</code>, sección aparte en <code>maximo.html</code>). Se elige un motor, un sensor, un driver y una placa de control por chips, y al ensamblar el sistema valida en vivo si la combinación es compatible a nivel hardware (por ejemplo, si el driver soporta ese motor, si el driver físico entra en esa placa, o si hay conflicto de pines analógicos) y devuelve un reporte estilo terminal con veredicto: compilación exitosa, viable con advertencias, o conflicto de hardware. Suma también botones de auto-configuración aleatoria y reset. No modifica <code>main.js</code> ni <code>perfil.js</code>.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-28 — Martin  (rama main)</time>
+        <p><strong>Desarrollo.</strong>  Sumé una función propia en martin.html: una interacción sobre mis películas y discos favoritos (js/martin.js nuevo). Al hacer click en una tarjeta (o con Enter/Espacio desde el teclado) queda seleccionada y aparece debajo un texto con el título y el detalle, por ejemplo "Esta noche veo: Shutter Island (2010 · Thriller)" o "Ahora sonando: Meteora — Linkin Park · 2003". Solo puede haber una tarjeta seleccionada por sección, y si vuelvo a hacer click sobre la misma se deselecciona. También agregué en cada sección un botón [ AL AZAR ] con una mini ruleta que recorre las tarjetas y frena en una elegida al azar. La función solo le suma la clase "seleccionada" a la tarjeta <code>setTimeout</code> al terminar la animación, y ahora también se puede seleccionar una tarjeta con un click directo (además del "Auto Pick"), liberando automáticamente la que estaba marcada antes.</p>
+        <p><strong>Bug.</strong>Al principio el script no hacía nada al abrir la página porque me faltaba cargar js/martin.js en martin.html. Agregué la línea <script src="js/martin.js"></script> al final, después de main.js y perfil.js.</p>
+      </div>
+      <div class="log-entry">
+        <time>2026-09-28 — Matias (rama main)</time>
+        <p><strong>Diseño.</strong> Resueltos los dos detalles anotados el 26/9: el glitch del título ahora se apaga solo con un <code>setTimeout</code> al terminar la animación, y ahora también se puede seleccionar una tarjeta con un click directo (además del "Auto Pick"), liberando automáticamente la que estaba marcada antes. <strong>SOLUCIONADO</strong></p>
+        <p><strong>Deploy.</strong> Publicado el sitio en Vercel y agregada la URL al README.</p>
+        <p><strong>Documentación.</strong> Repaso general del README (estructura de carpetas, funciones JS de cada perfil, capturas) de cara a la entrega final.</p>
+        <p><strong>Diseño.</strong> Sumé un favicon (<code>img/branding/favicon-equipo26.svg</code>, "26" en cian/magenta) cableado en el <code>&lt;head&gt;</code> de las 7 páginas del sitio.</p>
+        <p><strong>Bug.</strong> Probando el sitio publicado en Vercel desde el celular, el menú hamburguesa no se abría (no se veía nada al tocar "MENÚ", aunque el botón respondía). Encontré la causa: el header (<code>.site-nav</code>) tiene <code>clip-path</code> y <code>overflow: hidden</code> para el corte angular decorativo de sus bordes, y eso recorta también cualquier contenido que se salga de su caja — incluido el menú desplegable en mobile, que es un elemento posicionado <code>absolute</code> debajo del header. El menú en realidad sí se abría (la clase <code>is-open</code> se aplicaba bien), pero quedaba invisible, recortado por su propio contenedor. Lo arreglé desactivando <code>clip-path</code> y <code>overflow</code> del header solo dentro del breakpoint mobile (<code>@media max-width: 899px</code>), donde ese detalle decorativo no se nota. Probado en <code>localhost</code> emulando mobile: el menú ahora se despliega y navega bien en las 7 páginas. <strong>SOLUCIONADO</strong></p>
+      </div>
+
+          <div class="log-entry">
+        <time>2026-09-28 — Julian (rama perfil-julian)</time>
+        <p><strong>Desarrollo.</strong> Actualización menor en <code>julian.html</code> (ajuste sobre el perfil ya cargado).</p>
+        <p><strong>Documentación.</strong> Completé mi bloque de Uso de IA en el README: herramientas usadas, en qué asistió y criterio propio en las decisiones de diseño de la función dinámica. También agregué el origen del avatar (generado con Nano Banana 2 Lite).</p>
       </div>
     </section>
   </main>

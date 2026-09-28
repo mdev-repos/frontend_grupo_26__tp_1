@@ -1,6 +1,6 @@
-# TP1 · Grupo 26 — Sitio web grupal (estética Cyberpunk 2077)
+# TP1 · Grupo 26 - Sitio web grupal (estética Cyberpunk 2077)
 
-Sitio web del equipo 26 para el Trabajo Práctico Grupal 1 de Desarrollo de Sistemas Web (Front End, 2026).
+Sitio web del **equipo 26** para el **Trabajo Práctico Grupal n° 1** de la asignatura **Desarrollo de Sistemas Web FrontEnd (2026)**.
 Portada con presentación del equipo, un perfil individual por integrante y bitácora del proceso.
 Hecho con HTML, CSS y JavaScript puro, sin frameworks ni build step.
 
@@ -18,22 +18,43 @@ Hecho con HTML, CSS y JavaScript puro, sin frameworks ni build step.
 - CSS3 propio (variables CSS, Flexbox + Grid, animaciones y media queries)
 - JavaScript puro (sin librerías)
 - Google Fonts
-- Vercel (publicación)
+- Asistentes de IA (distintos por integrante — ver detalle en [Uso de IA](#uso-de-ia))
+- Vercel (deploy)
 
 ## Estructura de archivos y carpetas
 
 ```text
-index.html          → portada (equipo + listado de integrantes)
-emmanuel.html       → perfil de Emmanuel
-julian.html         → perfil de Julian
-martin.html         → perfil de Martin
-matias.html         → perfil de Matias
-maximo.html         → perfil de Maximo
-bitacora.html       → bitácora del proceso
-css/style.css       → estilos de todo el sitio
-js/main.js          → menú responsive + interacciones de la portada
-js/perfil.js        → interacción de escaneo de habilidades (perfiles)
-img/                → avatares, fotos, pósters y carátulas por integrante
+frontend_grupo_26__tp_1/
+|
+|-- index.html              # portada (equipo + listado de integrantes)
+|-- emmanuel.html            # perfil de Emmanuel
+|-- julian.html               # perfil de Julian
+|-- martin.html                # perfil de Martin
+|-- matias.html                 # perfil de Matias
+|-- maximo.html                  # perfil de Maximo
+|-- bitacora.html                 # bitácora del proceso
+|-- README.md                      # este archivo
+|
+|-- css/
+|   |--- style.css           # estilos de todo el sitio
+|
+|-- js/
+|   |--- main.js              # menú responsive + interacciones de la portada
+|   |--- perfil.js             # escaneo de habilidades (perfiles)
+|   |--- emmanuel.js            # lightbox propio del perfil de Emmanuel
+|   |--- matias.js               # terminal mainframe propia del perfil de Matias
+|   |--- robot-config.js          # configurador de robot propio del perfil de Maximo
+|   |--- martin.js                 # elección de película/disco propia del perfil de Martin
+|
+|-- img/
+    |--- avatar-placeholder.svg  # avatar genérico de respaldo
+    |--- branding/                # favicon del equipo (logo SVG)
+    |--- emmanuel/                 # foto, pósters y carátulas de Emmanuel
+    |--- julian/                    # avatar, pósters y carátulas de Julian
+    |--- martin/                     # avatar, pósters y carátulas de Martin
+    |--- matias/                      # avatar, pósters y carátulas de Matias
+    |--- maximo/                       # avatar, pósters y carátulas de Maximo
+    |--- capturas/                      # capturas de pantalla de las funciones dinámicas
 ```
 
 ## Guía de estilos
@@ -60,23 +81,46 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 
 - **Menú hamburguesa:** muestra/oculta la navegación en pantallas chicas (también corre en las demás páginas).
 - **Typewriter:** el texto de bienvenida se escribe letra por letra como una terminal.
-- **Reiniciar transmisión:** re-ejecuta el typewriter y dispara un glitch en el título.
-- **Auto pick character:** elige un integrante al azar, resalta su tarjeta y la desplaza a la vista.
+- **Reiniciar transmisión:** re-ejecuta el typewriter y dispara un glitch pasajero en el título (se apaga solo al terminar la animación).
 
-### Perfiles (`js/perfil.js`)
+  <p align="center"><img src="img/capturas/glitch-typewriter.png" alt="Typewriter de la portada y glitch del título al reiniciar transmisión" width="700"></p>
+
+- **Selección de personaje:** el botón `[ AUTO PICK CHARACTER ]` resalta una tarjeta al azar; también se puede click-ear directamente sobre cualquier tarjeta para marcarla, liberando la que estaba marcada antes.
+
+  <p align="center"><img src="img/capturas/picker.png" alt="Tarjeta de Julian seleccionada, con la anterior ya liberada" width="700"></p>
+
+### Perfiles (`js/perfil.js` + `js/emmanuel.js` + `js/matias.js` + `js/robot-config.js`+ `js/martin.js`)
 
 - **Escanear habilidades:** anima las barras de skill hasta el nivel (`data-value`) de cada integrante, en cascada. Corre al cargar y con el botón `[ ESCANEAR / RE-ESCANEAR ]`.
 
-> <!-- PENDIENTE GRUPO: agregar capturas de pantalla de cada función (portada + 5 perfiles). -->
+  <p align="center"><img src="img/capturas/escaner.png" alt="Barras de habilidades animadas en el perfil de Matias" width="700"></p>
+
+- **Filtro de contenido (Julian):** botones `[ MOSTRAR TODO / CINE / MÚSICA ]` que muestran u ocultan las secciones `.media-section` según `data-filter`/`data-category`.
+
+  <p align="center"><img src="img/capturas/filtro-julian.png" alt="Filtro &quot;Música&quot; activo en el perfil de Julian, mostrando solo los discos" width="700"></p>
+
+- **Lightbox de Emmanuel (`js/emmanuel.js`, solo `emmanuel.html`):** click en una tarjeta de película/disco la abre en grande (modal con título); cierra con Esc, botón `[ CERRAR × ]` o click fuera. No toca `main.js` ni `perfil.js`.
+
+  <p align="center"><img src="img/capturas/lightbox-emmanuel.png" alt="Lightbox abierto sobre el póster de Bastardos sin gloria" width="700"></p>
+
+- **Terminal Mainframe de Matias (`js/matias.js`, solo `matias.html`):** 4 botones de comandos falsos (`whoami`, `jobs --list`, `status`, `wake_up`) que tipean la respuesta letra por letra en una pantalla de terminal. El comando `wake_up` tira una referencia a Matrix ("Wake up, Matias... the mainframe has you. Follow the white rabbit."). No toca `main.js` ni `perfil.js`.
+
+  <p align="center"><img src="img/capturas/terminal-matias.png" alt="Terminal Mainframe mostrando la respuesta del comando wake_up" width="700"></p>
+
+- **Configurador de robot de Maximo (`js/robot-config.js`, solo `maximo.html`):** se elige un motor, sensor, driver y placa de control por chips; al ensamblar valida en vivo si la combinación es compatible (o incompatible) a nivel hardware y muestra un reporte estilo terminal. Incluye botones `[ ENSAMBLAR ROBOT ]`, `[ AUTO CONFIG ]` (arma una combinación al azar) y `[ RESET ]`.
+
+  <p align="center"><img src="img/capturas/robot-maximo.png" alt="Reporte de ensamblaje exitoso en el configurador de robot de Maximo" width="700"></p>
+
+- **Interacción de películas y discos de Martin (`js/martin.js`, solo `martin.html`):** click en una tarjeta de película o disco (o Enter/Espacio con el teclado) la marca como seleccionada y muestra debajo un texto con el título y el detalle, por ejemplo "Esta noche vemos: Shutter Island (2010 · Thriller)" o "Ahora sonando: Meteora — Linkin Park · 2003". Solo puede haber una tarjeta seleccionada por sección, y un segundo click sobre la misma la deselecciona. Cada sección incluye además un botón `[ PELÍCULA AL AZAR ]` / `[ DISCO AL AZAR ]` que recorre las tarjetas como una mini ruleta y frena en una al azar. Solo agrega la clase `seleccionada` y no define estilos propios. No toca `main.js` ni `perfil.js`.
+
+  <p align="center"><img src="img/capturas/eleccion_pel_dis.png" alt="Selección de una película y un disco en el perfil de Martin, con el texto de cada elección debajo de las grillas" width="700"></p>
 
 ## URL publicada en Vercel
 
-> <!-- PENDIENTE GRUPO: publicar en Vercel y pegar acá la URL. -->
+> https://equipo26tp1.vercel.app/index.html
 
 ## Evolución (para los siguientes trabajos)
 
-- Completar los 5 perfiles con datos e imágenes definitivas.
-- README con capturas y URL de Vercel.
 - Revisar breakpoints y accesibilidad antes de cada entrega.
 
 ## Uso de IA
@@ -85,11 +129,39 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 
 - **Herramientas:** opencode con el modelo Muse Spark 1.3 (plan gratuito).
 - **Experiencia previa:** uso diario de agentes de IA en el flujo de ingeniería.
-- **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil.
-- **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS de la rama (`main.js`, `perfil.js`) es del equipo y se reusó sin cambios.
-- **Imágenes:** foto propia (`Emma.png`); pósters y carátulas descargados de páginas web públicas.
+- **Qué asistió:** verificación de años/géneros de películas y discos para la tarjeta; revisión de estructura semántica del perfil; lightbox propio (`js/emmanuel.js` + estilos + modal) y porcentajes de skills variados (90/85/80/70).
+- **Criterio propio:** todos los textos, datos, imágenes y la bitácora se decidieron y revisaron a mano; el JS del equipo (`main.js`, `perfil.js`) se reusó sin cambios y el lightbox nuevo se probó a mano (abrir/cerrar con Esc, botón y click fuera).
+- **Imágenes:** foto propia (`emma.jpg`); pósters y carátulas descargados de páginas web públicas.
 
-> <!-- PENDIENTE GRUPO: cada integrante agrega su bloque (herramientas, plan, experiencia, qué revisó con criterio propio). -->
+### Matias
+
+- **Herramientas:** Claude (Anthropic), modelo Sonnet 5, a través de Claude Code (plan Pro, de pago); también Python + Pillow (librería de manipulación de imágenes, sin IA) para el recorte/composición del logo del avatar.
+- **Experiencia previa:** ya había usado Claude Code en otro trabajo individual (PFO1) para armar un sitio de punta a punta, así que esta fue una segunda vez, ya con más criterio propio sobre qué pedir y qué no.
+- **Qué asistió:** revisión de la estructura del repo y de todas las ramas antes de tocar nada (para detectar conflictos pendientes entre ramas sin mergear); armado de mi tarjeta (`matias.html`) siguiendo el template de Martin/Emmanuel; código de la función propia "Terminal Mainframe" (`js/matias.js` + estilos en `css/style.css`); ayuda para pensar 3 ideas de interacción que no se repitieran con las de mis compañeros, de las cuales elegí y adapté una; también el favicon (`img/branding/favicon-equipo26.svg`) del equipo, hecho a mano en SVG con el efecto glitch/paleta del sitio, sin usar ninguna IA de imágenes.
+- **Criterio propio:** yo definí los datos reales (ciudad, edad, skills, películas, discos), elegí qué película sacar de las 4 que tenía, decidí el concepto final de la terminal (comandos + referencia a Matrix) y probé a mano que los 4 botones respondan bien y que el resto del sitio (nav, scan de skills) siga funcionando igual. Por ultimo, retoque el codigo de forma manual para pulir los ultimos detalles.
+- **Imágenes:** avatar (`avatar_matias.png`) generado por mí con una IA de imágenes (estética cyberpunk, prompt propio ambientado en la temática del sitio). Para que quedara consistente con los avatares de Martin y Julian (que parten del arte oficial de Cyberpunk 2077 con el logo del juego incluido), le recorté el logo "Cyberpunk 2077" a la imagen de Martin, le quité el fondo oscuro con un script propio en Python/Pillow (umbral por luminosidad, sin IA) y lo superpuse en la esquina superior izquierda de mi avatar, mismo lugar y proporción relativa que en las otras tarjetas. Pósters y carátulas descargados de páginas web públicas.
+
+### Martin
+
+- **Herramientas:** Claude (Anthropic), modelo Sonnet 5, desde el chat web (plan: gratuito); para el avatar usé Chtgpt gratuito: avatar_martin.png.
+- **Qué asistió:** la generación de mi avatar; la corrección del diseño y de la paleta de colores del trabajo base (temática Cyberpunk 2077, cian/magenta); el código de mi función propia (`js/martin.js`), una interacción sobre mis películas y discos con selección por click y botón "al azar"; y la detección de conflictos y bugs en el HTML, por ejemplo que `martin.js` no se ejecutaba porque faltaba cargarlo en `martin.html`.
+- **Criterio propio:** con ayuda de Claude armé la estructura base que usa todo el equipo (HTMLs, `css/`, `js/`, `img/`, `perfil.js`), y también con su ayuda definí qué interacción hacer y cómo debía comportarse. Pedí que la función no llevara estilos propios para no tocar `css/style.css` ni `main.js`/`perfil.js`, y probé a mano que la selección, el "al azar" y el resto de la página (nav, escaneo de skills) siguieran funcionando bien.
+- **Imágenes:** avatar (`avatar_martin.png`) generado con una IA de imágenes con estética cyberpunk; pósters y carátulas descargados de páginas web públicas.
+
+### Maximo
+
+- **Herramientas:** Claude (Anthropic).
+- **Qué asistió (estimado a partir del código):** ayuda para armar la lógica de compatibilidad del configurador de robot (`js/robot-config.js`) — las reglas de motor/driver/placa y el reporte con veredicto (compilación exitosa / con advertencias / conflicto de hardware) — y para su tarjeta de perfil siguiendo el template del equipo.
+- **Imágenes:** avatar en versión cyberpunk (`maximo_ciber.png`) generado con una IA de imágenes; pósters y carátulas descargados de páginas web públicas.
+
+>
+
+### Julián
+
+- **Herramientas:** Claude (Anthropic).
+- **Qué asistió:** adaptación de un bloque de código de filtro que ya tenía, ajustado junto con la IA para que funcione con las secciones de películas y discos del perfil (`data-filter` / `data-category`), agregando una función dinámica extra al perfil.
+- **Criterio propio:** evalué primero la opción de tarjetas flip, pero opté por el filtro porque  ordena mejor la información y es más cómodo de usar; Además el flip alteraba la estética elegida por el grupo; también definí las categorías, el texto de los botones y qué películas/discos mostrar.
+- **Imágenes:** avatar generado con Nano Banana 2 Lite; pósters y carátulas descargados de páginas web públicas.
 
 ## Entrega
 
