@@ -87,7 +87,7 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 
   <p align="center"><img src="img/capturas/picker.png" alt="Tarjeta de Julian seleccionada, con la anterior ya liberada" width="700"></p>
 
-### Perfiles (`js/perfil.js` + `js/emmanuel.js` + `js/matias.js` + `js/robot-config.js`)
+### Perfiles (`js/perfil.js` + `js/emmanuel.js` + `js/matias.js` + `js/robot-config.js`+ `js/martin.js`)
 
 - **Escanear habilidades:** anima las barras de skill hasta el nivel (`data-value`) de cada integrante, en cascada. Corre al cargar y con el botón `[ ESCANEAR / RE-ESCANEAR ]`.
 
@@ -108,6 +108,10 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Configurador de robot de Maximo (`js/robot-config.js`, solo `maximo.html`):** se elige un motor, sensor, driver y placa de control por chips; al ensamblar valida en vivo si la combinación es compatible (o incompatible) a nivel hardware y muestra un reporte estilo terminal. Incluye botones `[ ENSAMBLAR ROBOT ]`, `[ AUTO CONFIG ]` (arma una combinación al azar) y `[ RESET ]`.
 
   <p align="center"><img src="img/capturas/robot-maximo.png" alt="Reporte de ensamblaje exitoso en el configurador de robot de Maximo" width="700"></p>
+
+- **Interacción de películas y discos de Martin (`js/martin.js`, solo `martin.html`):** click en una tarjeta de película o disco (o Enter/Espacio con el teclado) la marca como seleccionada y muestra debajo un texto con el título y el detalle, por ejemplo "Esta noche vemos: Shutter Island (2010 · Thriller)" o "Ahora sonando: Meteora — Linkin Park · 2003". Solo puede haber una tarjeta seleccionada por sección, y un segundo click sobre la misma la deselecciona. Cada sección incluye además un botón `[ PELÍCULA AL AZAR ]` / `[ DISCO AL AZAR ]` que recorre las tarjetas como una mini ruleta y frena en una al azar. Solo agrega la clase `seleccionada` y no define estilos propios. No toca `main.js` ni `perfil.js`.
+
+  <p align="center"><img src="img/capturas/eleccion_pel_dis.png" alt="Selección de una película y un disco en el perfil de Martin, con el texto de cada elección debajo de las grillas" width="700"></p>
 
 ## URL publicada en Vercel
 
@@ -135,7 +139,14 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Criterio propio:** yo definí los datos reales (ciudad, edad, skills, películas, discos), elegí qué película sacar de las 4 que tenía, decidí el concepto final de la terminal (comandos + referencia a Matrix) y probé a mano que los 4 botones respondan bien y que el resto del sitio (nav, scan de skills) siga funcionando igual. Por ultimo, retoque el codigo de forma manual para pulir los ultimos detalles.
 - **Imágenes:** avatar (`avatar_matias.png`) generado por mí con una IA de imágenes (estética cyberpunk, prompt propio ambientado en la temática del sitio). Para que quedara consistente con los avatares de Martin y Julian (que parten del arte oficial de Cyberpunk 2077 con el logo del juego incluido), le recorté el logo "Cyberpunk 2077" a la imagen de Martin, le quité el fondo oscuro con un script propio en Python/Pillow (umbral por luminosidad, sin IA) y lo superpuse en la esquina superior izquierda de mi avatar, mismo lugar y proporción relativa que en las otras tarjetas. Pósters y carátulas descargados de páginas web públicas.
 
-> <!-- PENDIENTE GRUPO: falta el bloque de Maximo, Julian y Martin. -->
+### Martin
+
+- **Herramientas:** Claude (Anthropic), modelo Sonnet 5, desde el chat web (plan: gratuito); para el avatar usé Chtgpt gratuito: avatar_martin.png.
+- **Qué asistió:** la generación de mi avatar; la corrección del diseño y de la paleta de colores del trabajo base (temática Cyberpunk 2077, cian/magenta); el código de mi función propia (`js/martin.js`), una interacción sobre mis películas y discos con selección por click y botón "al azar"; y la detección de conflictos y bugs en el HTML, por ejemplo que `martin.js` no se ejecutaba porque faltaba cargarlo en `martin.html`.
+- **Criterio propio:** con ayuda de Claude armé la estructura base que usa todo el equipo (HTMLs, `css/`, `js/`, `img/`, `perfil.js`), y también con su ayuda definí qué interacción hacer y cómo debía comportarse. Pedí que la función no llevara estilos propios para no tocar `css/style.css` ni `main.js`/`perfil.js`, y probé a mano que la selección, el "al azar" y el resto de la página (nav, escaneo de skills) siguieran funcionando bien.
+- **Imágenes:** avatar (`avatar_martin.png`) generado con una IA de imágenes con estética cyberpunk; pósters y carátulas descargados de páginas web públicas.
+
+> <!-- PENDIENTE GRUPO: falta el bloque de Maximo, Julian y . -->
 
 ## Entrega
 
