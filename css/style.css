@@ -839,6 +839,7 @@ h1, h2, h3 {
 /* Debajo de 900px: menú hamburguesa */
 @media (max-width: 899px) {
   .nav-toggle { display: inline-block; }
+  .site-nav { clip-path: none; overflow: visible; }
   .nav-links {
     position: absolute;
     top: 64px;

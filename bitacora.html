@@ -77,11 +77,12 @@
         <p><strong>Deploy.</strong> Publicado el sitio en Vercel y agregada la URL al README.</p>
         <p><strong>Documentación.</strong> Repaso general del README (estructura de carpetas, funciones JS de cada perfil, capturas) de cara a la entrega final.</p>
         <p><strong>Diseño.</strong> Sumé un favicon (<code>img/branding/favicon-equipo26.svg</code>, "26" en cian/magenta) cableado en el <code>&lt;head&gt;</code> de las 7 páginas del sitio.</p>
+        <p><strong>Bug.</strong> Probando el sitio publicado en Vercel desde el celular, el menú hamburguesa no se abría (no se veía nada al tocar "MENÚ", aunque el botón respondía). Encontré la causa: el header (<code>.site-nav</code>) tiene <code>clip-path</code> y <code>overflow: hidden</code> para el corte angular decorativo de sus bordes, y eso recorta también cualquier contenido que se salga de su caja — incluido el menú desplegable en mobile, que es un elemento posicionado <code>absolute</code> debajo del header. El menú en realidad sí se abría (la clase <code>is-open</code> se aplicaba bien), pero quedaba invisible, recortado por su propio contenedor. Lo arreglé desactivando <code>clip-path</code> y <code>overflow</code> del header solo dentro del breakpoint mobile (<code>@media max-width: 899px</code>), donde ese detalle decorativo no se nota. Probado en <code>localhost</code> emulando mobile: el menú ahora se despliega y navega bien en las 7 páginas. <strong>SOLUCIONADO</strong></p>
       </div>
-      
+
       <div class="log-entry">
         <time>Pendiente antes de entregar</time>
-        <p class="placeholder">Falta agregar el campo "Edad" en los perfiles de  Julian y Maximo (lo tienen Emmanuel, martin y Matias) y completar los bloques de Uso de IA de Maximo, Julian   en el README.</p>
+        <p class="placeholder">Falta completar el bloque de Uso de IA de Julian en el README.</p>
       </div>
     </section>
   </main>

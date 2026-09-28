@@ -44,15 +44,17 @@ frontend_grupo_26__tp_1/
 |   |--- emmanuel.js            # lightbox propio del perfil de Emmanuel
 |   |--- matias.js               # terminal mainframe propia del perfil de Matias
 |   |--- robot-config.js          # configurador de robot propio del perfil de Maximo
+|   |--- martin.js                 # elección de película/disco propia del perfil de Martin
 |
 |-- img/
     |--- avatar-placeholder.svg  # avatar genérico de respaldo
-    |--- emmanuel/                # foto, pósters y carátulas de Emmanuel
-    |--- julian/                   # avatar, pósters y carátulas de Julian
-    |--- martin/                    # avatar, pósters y carátulas de Martin
-    |--- matias/                     # avatar, pósters y carátulas de Matias
-    |--- maximo/                      # avatar, pósters y carátulas de Maximo
-    |--- capturas/                     # capturas de pantalla de las funciones dinámicas
+    |--- branding/                # favicon del equipo (logo SVG)
+    |--- emmanuel/                 # foto, pósters y carátulas de Emmanuel
+    |--- julian/                    # avatar, pósters y carátulas de Julian
+    |--- martin/                     # avatar, pósters y carátulas de Martin
+    |--- matias/                      # avatar, pósters y carátulas de Matias
+    |--- maximo/                       # avatar, pósters y carátulas de Maximo
+    |--- capturas/                      # capturas de pantalla de las funciones dinámicas
 ```
 
 ## Guía de estilos
@@ -146,7 +148,13 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Criterio propio:** con ayuda de Claude armé la estructura base que usa todo el equipo (HTMLs, `css/`, `js/`, `img/`, `perfil.js`), y también con su ayuda definí qué interacción hacer y cómo debía comportarse. Pedí que la función no llevara estilos propios para no tocar `css/style.css` ni `main.js`/`perfil.js`, y probé a mano que la selección, el "al azar" y el resto de la página (nav, escaneo de skills) siguieran funcionando bien.
 - **Imágenes:** avatar (`avatar_martin.png`) generado con una IA de imágenes con estética cyberpunk; pósters y carátulas descargados de páginas web públicas.
 
-> <!-- PENDIENTE GRUPO: falta el bloque de Maximo, Julian y . -->
+### Maximo
+
+- **Herramientas:** Claude (Anthropic).
+- **Qué asistió (estimado a partir del código):** ayuda para armar la lógica de compatibilidad del configurador de robot (`js/robot-config.js`) — las reglas de motor/driver/placa y el reporte con veredicto (compilación exitosa / con advertencias / conflicto de hardware) — y para su tarjeta de perfil siguiendo el template del equipo.
+- **Imágenes:** avatar en versión cyberpunk (`maximo_ciber.png`) generado con una IA de imágenes; pósters y carátulas descargados de páginas web públicas.
+
+> <!-- PENDIENTE GRUPO: falta el bloque de Julian. -->
 
 ## Entrega
 
