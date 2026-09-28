@@ -704,6 +704,64 @@ h1, h2, h3 {
 }
 .skill-value { color: var(--cyan); text-align: right; }
 
+/* Terminal Mainframe (interacción propia — matias.html) */
+
+.mf-terminal {
+  margin-top: 1rem;
+  border: 1px solid var(--cyan-dim);
+  background: var(--bg-void);
+  box-shadow: 0 0 20px rgba(2, 215, 242, 0.08);
+}
+
+.mf-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-panel-alt);
+  border-bottom: 1px solid var(--line);
+}
+
+.mf-terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.6;
+}
+
+.mf-terminal-title {
+  margin-left: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.mf-terminal-screen {
+  min-height: 7rem;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--cyan);
+  text-shadow: 0 0 6px var(--cyan-dim);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mf-terminal-cmds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0 1rem 1rem;
+}
+
+.mf-terminal-cmds .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
 .has-lightbox .media-card { cursor: zoom-in; }
 .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(4, 5, 13, 0.9); z-index: 50; padding: 1rem; }
 .lightbox.is-open { display: flex; }
