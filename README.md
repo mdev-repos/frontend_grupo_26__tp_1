@@ -154,7 +154,14 @@ Temática inspirada en Cyberpunk 2077: fondos oscuros, neones cian/magenta y tip
 - **Qué asistió (estimado a partir del código):** ayuda para armar la lógica de compatibilidad del configurador de robot (`js/robot-config.js`) — las reglas de motor/driver/placa y el reporte con veredicto (compilación exitosa / con advertencias / conflicto de hardware) — y para su tarjeta de perfil siguiendo el template del equipo.
 - **Imágenes:** avatar en versión cyberpunk (`maximo_ciber.png`) generado con una IA de imágenes; pósters y carátulas descargados de páginas web públicas.
 
-> <!-- PENDIENTE GRUPO: falta el bloque de Julian. -->
+>
+
+### Julián
+
+- **Herramientas:** Claude (Anthropic).
+- **Qué asistió:** adaptación de un bloque de código de filtro que ya tenía, ajustado junto con la IA para que funcione con las secciones de películas y discos del perfil (`data-filter` / `data-category`), agregando una función dinámica extra al perfil.
+- **Criterio propio:** evalué primero la opción de tarjetas flip, pero opté por el filtro porque  ordena mejor la información y es más cómodo de usar; Además el flip alteraba la estética elegida por el grupo; también definí las categorías, el texto de los botones y qué películas/discos mostrar.
+- **Imágenes:** avatar generado con Nano Banana 2 Lite; pósters y carátulas descargados de páginas web públicas.
 
 ## Entrega
 
